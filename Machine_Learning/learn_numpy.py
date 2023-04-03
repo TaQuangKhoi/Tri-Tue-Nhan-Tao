@@ -1,4 +1,8 @@
-# Array, 9-3,10-1.5
+# Change value of many elements
 import numpy as np
 
-print(np.append(np.full_like(np.zeros(9), 3), 1.5))
+a = np.array([1,3,5])
+
+a[0:] = 2
+
+print(a)
