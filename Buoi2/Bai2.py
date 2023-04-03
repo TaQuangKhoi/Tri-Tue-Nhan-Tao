@@ -60,19 +60,22 @@ graph3 = {
 visited = [] # List of visited nodes
 queue   = [] # Initialize a queue
 
-
+# biến node là nút bắt đầu
 def bfs(visited, graph, node) :
     visited.append(node)
     queue.append(node)
 
     while queue: # Create a loop to visit each node
+        print("Queue: ", queue, end = "\n")
         m = queue.pop(0)
         print(m, end = " ")
 
         for neighbour in graph[m]:
+            print( "Graph[m] %s" % (graph[m]) , end = "\n")
             if neighbour not in visited:
                 visited.append(neighbour)
                 queue.append(neighbour)
+
 
 # Driver Code
 print("Following is the Breadth-First Search")
